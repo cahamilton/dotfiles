@@ -20,5 +20,7 @@ source "brew/install-formulae.sh"
 
 source "brew/install-casks.sh"
 
+source "brew/install-mas.sh"
+
 # Remove stale formulae and casks
 brew cleanup
