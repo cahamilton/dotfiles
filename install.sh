@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-echo "Hello World"
+# Homebrew installers
+source "brew/install.sh"
