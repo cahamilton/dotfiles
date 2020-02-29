@@ -16,5 +16,7 @@ else
 	brew upgrade
 fi
 
+source "brew/install-formulae.sh"
+
 # Remove stale formulae and casks
 brew cleanup
