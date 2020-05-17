@@ -47,6 +47,7 @@ brew cask install gpg-suite
 brew cask install handbrake
 brew cask install istumbler
 brew cask install keepingyouawake
+brew cask install netgear-switch-discovery-tool
 brew cask install onyx
 brew cask install openoffice
 brew cask install private-internet-access
@@ -64,6 +65,8 @@ brew cask install vlc
 # Social
 brew cask install caprine
 brew cask install discord
+brew cask install houseparty
+brew cask install microsoft-teams
 brew cask install slack
 brew cask install telegram
 brew cask install whatsapp
