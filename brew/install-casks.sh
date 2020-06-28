@@ -70,6 +70,7 @@ brew cask install microsoft-teams
 brew cask install slack
 brew cask install telegram
 brew cask install whatsapp
+brew cask install zoomus
 
 # Quick Look Plugins
 brew cask install qlcolorcode
