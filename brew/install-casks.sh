@@ -3,25 +3,26 @@
 # Add additional repositories
 brew tap homebrew/cask-drivers
 brew tap homebrew/cask-fonts
+brew tap homebrew/cask-versions
 
 # Browsers
 brew cask install firefox
-brew cask install firefox-nightly
+brew cask install firefox-developer-edition
 brew cask install google-chrome
-brew cask install google-chrome-canary
-brew cask install microsoft-edge-canary
+brew cask install google-chrome-dev
+brew cask install microsoft-edge
+brew cask install microsoft-edge-dev
 brew cask install opera
 brew cask install safari-technology-preview
 
 # Development
 brew cask install adobe-creative-cloud
-brew cask install charles
 brew cask install cyberduck
 brew cask install docker
+brew cask install font-fira-code
 brew cask install font-meslo-for-powerline
 brew cask install font-meslo-lg
 brew cask install github
-brew cask install imagealpha
 brew cask install imageoptim
 brew cask install iterm2
 brew cask install jetbrains-toolbox
@@ -43,14 +44,12 @@ brew cask install bettertouchtool
 brew cask install disk-inventory-x
 brew cask install dropbox
 brew cask install flux
+brew cask install google-backup-and-sync
 brew cask install gpg-suite
 brew cask install handbrake
-brew cask install istumbler
 brew cask install keepingyouawake
 brew cask install netgear-switch-discovery-tool
 brew cask install onyx
-brew cask install openoffice
-brew cask install private-internet-access
 brew cask install the-unarchiver
 brew cask install viscosity
 
@@ -65,12 +64,12 @@ brew cask install vlc
 # Social
 brew cask install caprine
 brew cask install discord
-brew cask install houseparty
 brew cask install microsoft-teams
+brew cask install signal
 brew cask install slack
 brew cask install telegram
 brew cask install whatsapp
-brew cask install zoomus
+brew cask install zoom
 
 # Quick Look Plugins
 brew cask install qlcolorcode
