@@ -17,12 +17,14 @@ brew cask install safari-technology-preview
 
 # Development
 brew cask install adobe-creative-cloud
+brew cask install browserstacklocal
 brew cask install cyberduck
 brew cask install docker
 brew cask install font-fira-code
 brew cask install font-meslo-for-powerline
 brew cask install font-meslo-lg
 brew cask install github
+brew cask install graphql-playground
 brew cask install imageoptim
 brew cask install iterm2
 brew cask install jetbrains-toolbox
@@ -37,6 +39,7 @@ brew cask install webponize
 # Utilities
 brew cask install 1password
 brew cask install alfred
+brew cask install app-cleaner
 brew cask install authy
 brew cask install backblaze
 brew cask install backblaze-downloader
@@ -50,6 +53,7 @@ brew cask install handbrake
 brew cask install keepingyouawake
 brew cask install netgear-switch-discovery-tool
 brew cask install onyx
+brew cask install skitch
 brew cask install the-unarchiver
 brew cask install viscosity
 

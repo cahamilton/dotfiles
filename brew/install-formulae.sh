@@ -11,6 +11,7 @@ brew install yarn
 
 # Utilities
 brew install coreutils
+brew install exa
 brew install fdupes
 brew install ffmpeg
 brew install gcal
@@ -24,3 +25,4 @@ brew install zsh-autosuggestions
 
 # Novelty
 brew install gti
+brew install sl
