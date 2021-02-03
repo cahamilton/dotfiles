@@ -2,7 +2,6 @@
 
 # Add additional repositories
 brew tap homebrew/cask-drivers
-brew tap homebrew/cask-fonts
 brew tap homebrew/cask-versions
 
 # Browsers
@@ -20,9 +19,6 @@ brew cask install adobe-creative-cloud
 brew cask install browserstacklocal
 brew cask install cyberduck
 brew cask install docker
-brew cask install font-fira-code
-brew cask install font-meslo-for-powerline
-brew cask install font-meslo-lg
 brew cask install github
 brew cask install graphql-playground
 brew cask install imageoptim

@@ -7,6 +7,7 @@ brew install git-extras
 brew install nvm
 brew install php
 brew install python
+brew install svn
 brew install yarn
 
 # Utilities
