@@ -5,79 +5,85 @@ brew tap homebrew/cask-drivers
 brew tap homebrew/cask-versions
 
 # Browsers
-brew cask install firefox
-brew cask install firefox-developer-edition
-brew cask install google-chrome
-brew cask install google-chrome-dev
-brew cask install microsoft-edge
-brew cask install microsoft-edge-dev
-brew cask install opera
-brew cask install safari-technology-preview
+brew install --cask \
+	firefox \
+	firefox-developer-edition \
+	google-chrome \
+	google-chrome-dev \
+	microsoft-edge \
+	microsoft-edge-dev \
+	opera \
+	safari-technology-preview
 
 # Development
-brew cask install adobe-creative-cloud
-brew cask install browserstacklocal
-brew cask install cyberduck
-brew cask install docker
-brew cask install github
-brew cask install graphql-playground
-brew cask install imageoptim
-brew cask install iterm2
-brew cask install jetbrains-toolbox
-brew cask install postman
-brew cask install sequel-pro
-brew cask install sketch
-brew cask install sublime-text
-brew cask install virtualbox
-brew cask install visual-studio-code
-brew cask install webponize
+brew install --cask \
+	adobe-creative-cloud \
+	browserstacklocal \
+	cyberduck \
+	docker \
+	github \
+	graphql-playground \
+	imageoptim \
+	iterm2 \
+	jetbrains-toolbox \
+	postman \
+	sequel-pro \
+	sketch \
+	sublime-text \
+	virtualbox \
+	visual-studio-code \
+	webponize
 
 # Utilities
-brew cask install 1password
-brew cask install alfred
-brew cask install app-cleaner
-brew cask install authy
-brew cask install backblaze
-brew cask install backblaze-downloader
-brew cask install bettertouchtool
-brew cask install disk-inventory-x
-brew cask install dropbox
-brew cask install flux
-brew cask install google-backup-and-sync
-brew cask install gpg-suite
-brew cask install handbrake
-brew cask install keepingyouawake
-brew cask install netgear-switch-discovery-tool
-brew cask install onyx
-brew cask install skitch
-brew cask install the-unarchiver
-brew cask install viscosity
+brew install --cask \
+	1password \
+	alfred \
+	app-cleaner \
+	authy \
+	backblaze \
+	backblaze-downloader \
+	bettertouchtool \
+	disk-inventory-x \
+	dropbox \
+	flux \
+	google-backup-and-sync \
+	gpg-suite \
+	handbrake \
+	keepingyouawake \
+	netgear-switch-discovery-tool \
+	onyx \
+	skitch \
+	the-unarchiver \
+	viscosity
 
 # Entertainment
-brew cask install plex-media-player
-brew cask install sony-ps4-remote-play
-brew cask install spotify
-brew cask install steam
-brew cask install twitch
-brew cask install vlc
+brew install --cask \
+	plex-media-player \
+	sony-ps4-remote-play \
+	spotify \
+	steam \
+	twitch \
+	vlc
 
 # Social
-brew cask install caprine
-brew cask install discord
-brew cask install microsoft-teams
-brew cask install signal
-brew cask install slack
-brew cask install telegram
-brew cask install whatsapp
-brew cask install zoom
+brew install --cask \
+	caprine \
+	discord \
+	microsoft-teams \
+	signal \
+	slack \
+	telegram \
+	whatsapp \
+	zoom
 
 # Quick Look Plugins
-brew cask install qlcolorcode
-brew cask install qlimagesize
-brew cask install qlmarkdown
-brew cask install qlprettypatch
-brew cask install qlstephen
-brew cask install qlvideo
-brew cask install quicklook-csv
-brew cask install quicklook-json
-brew cask install webpquicklook
+brew install --cask \
+	qlcolorcode \
+	qlimagesize \
+	qlmarkdown \
+	qlprettypatch \
+	qlstephen \
+	qlvideo \
+	quicklook-csv \
+	quicklook-json \
+	webpquicklook
