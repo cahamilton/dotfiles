@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do
+	sudo -n true
+	sleep 60
+	kill -0 "$$" || exit
+done 2>/dev/null &
+
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
+
+# Always show scrollbars
+defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+
+# Set DateTime format in Menu Bar
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm"
+defaults write com.apple.menuextra.clock FlashDateSeparators -bool true
+defaults write com.apple.menuextra.clock IsAnalog -bool false
+
+# Remove the auto-hiding Dock delay
+defaults write com.apple.dock autohide-delay -float 0
+
+# Remove the animation when hiding/showing the Dock
+defaults write com.apple.dock autohide-time-modifier -float 0
+
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
+
+# Don’t show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
+for app in "cfprefsd" \
+	"Dock" \
+	"Finder" \
+	"SystemUIServer"; do
+	killall "${app}" &>/dev/null
+done
