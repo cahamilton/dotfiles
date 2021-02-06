@@ -22,9 +22,8 @@ brew install \
 	moreutils \
 	neofetch \
 	rsync \
-	z \
-	zsh \
-	zsh-autosuggestions
+	zplug \
+	zsh
 
 # Novelty
 brew install \
