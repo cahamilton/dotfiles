@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+alias config="vim ~/.zshrc"
+alias spacer="defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock"
