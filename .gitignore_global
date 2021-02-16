@@ -2,7 +2,9 @@
 .env
 .env.*
 .idea/
+.scratch/
 .vscode/
 *.patch
+scratchpad.*
 npm-debug.log
 yarn-error.log
