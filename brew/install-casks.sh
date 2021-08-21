@@ -6,6 +6,7 @@ brew tap homebrew/cask-versions
 
 # Browsers
 brew install --cask \
+	brave-browser \
 	firefox \
 	firefox-developer-edition \
 	google-chrome \
@@ -19,13 +20,14 @@ brew install --cask \
 brew install --cask \
 	adobe-creative-cloud \
 	browserstacklocal \
-	cyberduck \
 	docker \
 	github \
-	graphql-playground \
+	graphiql \
 	imageoptim \
+	insomnia \
 	iterm2 \
 	jetbrains-toolbox \
+	keybase \
 	postman \
 	sequel-pro \
 	sketch \
@@ -38,7 +40,7 @@ brew install --cask \
 brew install --cask \
 	1password \
 	alfred \
-	app-cleaner \
+	appcleaner \
 	authy \
 	backblaze \
 	backblaze-downloader \
@@ -59,7 +61,6 @@ brew install --cask \
 # Entertainment
 brew install --cask \
 	plex-media-player \
-	sony-ps4-remote-play \
 	spotify \
 	steam \
 	twitch \
@@ -67,8 +68,8 @@ brew install --cask \
 
 # Social
 brew install --cask \
-	caprine \
 	discord \
+	messenger \
 	microsoft-teams \
 	signal \
 	slack \

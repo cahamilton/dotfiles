@@ -6,18 +6,14 @@ brew install \
 	git \
 	git-extras \
 	nvm \
-	php \
+	openjdk@11 \
 	python \
-	svn \
-	yarn
+	svn
 
 # Utilities
 brew install \
 	coreutils \
-	exa \
 	fdupes \
-	ffmpeg \
-	gcal \
 	gotop \
 	moreutils \
 	neofetch \
@@ -27,5 +23,4 @@ brew install \
 
 # Novelty
 brew install \
-	gti \
-	sl
+	gti
