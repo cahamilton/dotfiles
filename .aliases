@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-alias config="vim ~/.zshrc"
+alias config="code ~/.dotfiles"
+alias reload="source ~/.zshrc"
+alias repos="open ~/Github"
 alias spacer="defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock"
