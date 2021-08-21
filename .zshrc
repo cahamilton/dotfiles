@@ -2,22 +2,19 @@ export ZPLUG_HOME=/usr/local/opt/zplug
 
 source $ZPLUG_HOME/init.zsh
 
-# Load Plugins
-zplug "favware/zsh-lerna", from:github
-zplug "marlonrichert/zsh-autocomplete", from:github
-zplug "plugins/docker-compose", from:oh-my-zsh
-zplug "plugins/docker", from:oh-my-zsh
-zplug "plugins/git-extras", from:oh-my-zsh
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/gpg-agent", from:oh-my-zsh
-zplug "plugins/last-working-dir", from:oh-my-zsh
-zplug "plugins/sudo", from:oh-my-zsh
-zplug "plugins/z", from:oh-my-zsh
-zplug "zsh-users/zsh-autosuggestions", from:github
-zplug "zsh-users/zsh-completions", from:github
+# Plugins
+zplug "agkozak/zsh-z", from:github, depth:1
+zplug "plugins/sudo", from:oh-my-zsh, depth:1
+zplug "plugins/gpg-agent", from:oh-my-zsh, depth:1
+zplug "zsh-users/zsh-autosuggestions", from:github, depth:1
+zplug "zsh-users/zsh-completions", from:github, depth:1
+zplug "zsh-users/zsh-syntax-highlighting", from:github, depth:1, defer:2
 
-# Load Theme
-zplug "romkatv/powerlevel10k", from:github, as:theme
+# Theme
+zplug "romkatv/powerlevel10k", from:github, depth:1, as:theme
+
+# Commands
+zplug "junegunn/fzf", from:github, depth:1, as:command, rename-to:fzf, hook-build:"./install --all"
 
 # Prompt to install plugins if not installed
 if ! zplug check --verbose; then

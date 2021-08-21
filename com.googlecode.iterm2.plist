@@ -1434,7 +1434,7 @@
 	<key>ShowMetalFPSmeter</key>
 	<false/>
 	<key>ShowPaneTitles</key>
-	<false/>
+	<true/>
 	<key>SmartPlacement</key>
 	<true/>
 	<key>SoundForEsc</key>
@@ -1442,7 +1442,7 @@
 	<key>StatusBarPosition</key>
 	<integer>0</integer>
 	<key>TabStyleWithAutomaticOption</key>
-	<integer>5</integer>
+	<integer>4</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>TabsHaveCloseButton</key>
