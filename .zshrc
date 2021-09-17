@@ -7,7 +7,6 @@ zplug "agkozak/zsh-z", from:github, depth:1
 zplug "plugins/sudo", from:oh-my-zsh, depth:1
 zplug "plugins/gpg-agent", from:oh-my-zsh, depth:1
 zplug "zsh-users/zsh-autosuggestions", from:github, depth:1
-zplug "zsh-users/zsh-completions", from:github, depth:1
 zplug "zsh-users/zsh-syntax-highlighting", from:github, depth:1, defer:2
 
 # Theme
@@ -15,6 +14,11 @@ zplug "romkatv/powerlevel10k", from:github, depth:1, as:theme
 
 # Commands
 zplug "junegunn/fzf", from:github, depth:1, as:command, rename-to:fzf, hook-build:"./install --all"
+
+# Autocompletions
+zplug "zsh-users/zsh-completions", from:github, depth:1
+zplug "docker/cli", from:github, depth:1, use:contrib/completion/zsh
+zplug "docker/compose", from:github, depth:1, use:contrib/completion/zsh
 
 # Prompt to install plugins if not installed
 if ! zplug check --verbose; then
