@@ -5,7 +5,6 @@ brew install \
 	gh \
 	git \
 	git-extras \
-	nvm \
 	openjdk@11 \
 	python \
 	svn

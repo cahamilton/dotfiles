@@ -1,4 +1,5 @@
 export ZPLUG_HOME=/usr/local/opt/zplug
+export NVM_LAZY_LOAD=true
 
 source $ZPLUG_HOME/init.zsh
 
@@ -8,6 +9,7 @@ zplug "plugins/sudo", from:oh-my-zsh, depth:1
 zplug "plugins/gpg-agent", from:oh-my-zsh, depth:1
 zplug "zsh-users/zsh-autosuggestions", from:github, depth:1
 zplug "zsh-users/zsh-syntax-highlighting", from:github, depth:1, defer:2
+zplug "lukechilds/zsh-nvm", from:github, depth:1
 
 # Theme
 zplug "romkatv/powerlevel10k", from:github, depth:1, as:theme
@@ -37,7 +39,3 @@ zplug load
 
 # Import aliases
 source ~/.aliases
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
