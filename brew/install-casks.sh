@@ -24,10 +24,8 @@ brew install --cask \
 	github \
 	graphiql \
 	imageoptim \
-	insomnia \
 	iterm2 \
 	jetbrains-toolbox \
-	keybase \
 	postman \
 	sequel-pro \
 	sketch \
@@ -45,6 +43,7 @@ brew install --cask \
 	backblaze \
 	backblaze-downloader \
 	bettertouchtool \
+	cakebrew \
 	disk-inventory-x \
 	dropbox \
 	flux \
@@ -60,6 +59,7 @@ brew install --cask \
 
 # Entertainment
 brew install --cask \
+	lastfm \
 	plex-media-player \
 	spotify \
 	steam \
