@@ -14,9 +14,6 @@ zplug "lukechilds/zsh-nvm", from:github, depth:1
 # Theme
 zplug "romkatv/powerlevel10k", from:github, depth:1, as:theme
 
-# Commands
-zplug "junegunn/fzf", from:github, depth:1, as:command, rename-to:fzf, hook-build:"./install --all"
-
 # Autocompletions
 zplug "zsh-users/zsh-completions", from:github, depth:1
 zplug "docker/cli", from:github, depth:1, use:contrib/completion/zsh
