@@ -5,6 +5,7 @@ brew install \
 	gh \
 	git \
 	git-extras \
+	hadolint \
 	openjdk@11 \
 	python \
 	svn
@@ -13,7 +14,7 @@ brew install \
 brew install \
 	coreutils \
 	fdupes \
-	gotop \
+	htop \
 	moreutils \
 	neofetch \
 	rsync \
