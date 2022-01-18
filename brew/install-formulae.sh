@@ -2,6 +2,7 @@
 
 # Development
 brew install \
+	commitizen \
 	gh \
 	git \
 	git-extras \
