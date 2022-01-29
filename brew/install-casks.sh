@@ -51,6 +51,7 @@ brew install --cask \
 	gpg-suite \
 	handbrake \
 	keepingyouawake \
+	logitech-options \
 	netgear-switch-discovery-tool \
 	onyx \
 	skitch \
