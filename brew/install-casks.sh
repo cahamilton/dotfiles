@@ -47,7 +47,6 @@ brew install --cask \
 	disk-inventory-x \
 	dropbox \
 	flux \
-	google-backup-and-sync \
 	gpg-suite \
 	handbrake \
 	keepingyouawake \
