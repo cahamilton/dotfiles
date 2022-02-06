@@ -1,6 +1,8 @@
 export ZPLUG_HOME=/usr/local/opt/zplug
 export NVM_LAZY_LOAD=true
 
+setopt HIST_IGNORE_SPACE
+
 source $ZPLUG_HOME/init.zsh
 
 # Plugins
