@@ -21,6 +21,7 @@ brew install --cask \
 	adobe-creative-cloud \
 	browserstacklocal \
 	docker \
+	figma \
 	github \
 	graphiql \
 	imageoptim \
