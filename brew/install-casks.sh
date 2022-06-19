@@ -19,11 +19,11 @@ brew install --cask \
 # Development
 brew install --cask \
 	adobe-creative-cloud \
+	altair-graphql-client \
 	browserstacklocal \
 	docker \
 	figma \
 	github \
-	graphiql \
 	imageoptim \
 	iterm2 \
 	jetbrains-toolbox \
