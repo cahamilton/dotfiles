@@ -7,9 +7,9 @@ brew install \
 	git \
 	git-extras \
 	hadolint \
+	nvm \
 	openjdk@11 \
-	pyenv \
-	svn
+	pyenv
 
 # Utilities
 brew install \

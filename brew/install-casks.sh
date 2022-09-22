@@ -21,6 +21,7 @@ brew install --cask \
 	adobe-creative-cloud \
 	altair-graphql-client \
 	browserstacklocal \
+	ccmenu \
 	docker \
 	figma \
 	github \
@@ -48,7 +49,7 @@ brew install --cask \
 	disk-inventory-x \
 	dropbox \
 	flux \
-	gpg-suite \
+	gpg-suite-no-mail \
 	handbrake \
 	keepingyouawake \
 	logitech-options \
