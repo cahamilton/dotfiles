@@ -1,5 +1,5 @@
+export PATH="/usr/local/sbin:$PATH"
 export ZPLUG_HOME=/usr/local/opt/zplug
-export NVM_LAZY_LOAD=true
 
 setopt HIST_IGNORE_SPACE
 
@@ -38,3 +38,7 @@ zplug load
 
 # Import aliases
 source ~/.aliases
+
+if command -v pyenv 1>/dev/null 2>&1; then
+	eval "$(pyenv init -)"
+fi
