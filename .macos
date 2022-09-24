@@ -97,6 +97,10 @@ defaults write com.apple.dock persistent-apps -array \
 	"$(add_dock_item /Applications/Telegram.app)" \
 	"$(add_dock_item /Applications/Messenger.app)"
 
+# Set folder location for iTerm2 preferences
+defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "~/.dotfiles"
+defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
+
 for app in "cfprefsd" \
 	"Dock" \
 	"Finder" \
