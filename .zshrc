@@ -1,5 +1,12 @@
 export PATH="/usr/local/sbin:$PATH"
-export ZPLUG_HOME=/usr/local/opt/zplug
+export HOMEBREW_PREFIX="/usr/local/opt"
+
+# Update prefix if running on Apple Silicon
+if [[ "$(uname -m)" == "arm64" ]]; then
+	export HOMEBREW_PREFIX="/opt/homebrew/opt"
+fi
+
+export ZPLUG_HOME="$HOMEBREW_PREFIX/zplug"
 
 setopt HIST_IGNORE_SPACE
 
