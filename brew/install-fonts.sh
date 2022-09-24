@@ -4,8 +4,7 @@
 brew tap homebrew/cask-fonts
 
 # Install fonts
-brew install --cask \
-	font-fira-code \
-	font-hack-nerd-font \
-	font-meslo-for-powerline \
-	font-meslo-lg
+brew install font-fira-code --cask
+brew install font-hack-nerd-font --cask
+brew install font-meslo-for-powerline --cask
+brew install font-meslo-lg --cask
