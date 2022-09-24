@@ -25,17 +25,77 @@ defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm"
 defaults write com.apple.menuextra.clock FlashDateSeparators -bool true
 defaults write com.apple.menuextra.clock IsAnalog -bool false
 
+# Set Dock position
+defaults write com.apple.dock orientation -string "bottom"
+
+# Set Dock icon size
+defaults write com.apple.dock tilesize -int 42
+
+# Set Dock animation when minimizing windows
+defaults write com.apple.dock mineffect -string "suck"
+
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
+
 # Reduce the auto-hiding Dock delay
 defaults write com.apple.dock autohide-delay -float 0.2
 
 # Remove the animation when hiding/showing the Dock
 defaults write com.apple.dock autohide-time-modifier -float 0
 
-# Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool true
-
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
+
+# Add icons to the Dock
+add_dock_item() {
+	printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>', "$1"
+}
+
+add_dock_spacer() {
+	printf '<dict><key>tile-type</key><string>spacer-tile</string></dict>'
+}
+
+defaults write com.apple.dock persistent-apps -array \
+	"$(add_dock_item /System/Applications/Notes.app)" \
+	"$(add_dock_item /System/Applications/Reminders.app)" \
+	"$(add_dock_item /System/Applications/Calendar.app)" \
+	"$(add_dock_item /Applications/Trello.app)" \
+	"$(add_dock_item /Applications/Microsoft\ Outlook.app)" \
+	"$(add_dock_item /System/Applications/Mail.app)" \
+	"$(add_dock_item /Applications/1Password.app)" \
+	"$(add_dock_item /Applications/Authy\ Desktop.app)" \
+	"$(add_dock_spacer)" \
+	"$(add_dock_item /Applications/Spotify.app)" \
+	"$(add_dock_item /System/Applications/Music.app)" \
+	"$(add_dock_spacer)" \
+	"$(add_dock_item /Applications/Firefox.app)" \
+	"$(add_dock_item /Applications/Firefox\ Developer\ Edition.app)" \
+	"$(add_dock_item /Applications/Google\ Chrome.app)" \
+	"$(add_dock_item /Applications/Google\ Chrome\ Dev.app)" \
+	"$(add_dock_item /Applications/Microsoft\ Edge.app)" \
+	"$(add_dock_item /Applications/Brave\ Browser.app)" \
+	"$(add_dock_spacer)" \
+	"$(add_dock_item /Applications/iTerm.app)" \
+	"$(add_dock_item /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app)" \
+	"$(add_dock_item /Applications/BrowserStackLocal.app)" \
+	"$(add_dock_item ~/Applications/JetBrains\ Toolbox/Android\ Studio.app)" \
+	"$(add_dock_item ~/Applications/JetBrains\ Toolbox/IntelliJ\ IDEA\ Ultimate.app)" \
+	"$(add_dock_item /Applications/Visual\ Studio\ Code.app)" \
+	"$(add_dock_item /Applications/Sublime\ Text.app)" \
+	"$(add_dock_item /Applications/Altair\ GraphQL\ Client.app)" \
+	"$(add_dock_item /Applications/Postman.app)" \
+	"$(add_dock_item /Applications/Xcode.app/Contents/Applications/FileMerge.app)" \
+	"$(add_dock_spacer)" \
+	"$(add_dock_item /Applications/Adobe\ Photoshop\ 2022/Adobe\ Photoshop\ 2022.app)" \
+	"$(add_dock_item /Applications/Adobe\ Illustrator\ 2022/Adobe\ Illustrator.app)" \
+	"$(add_dock_spacer)" \
+	"$(add_dock_item /Applications/Slack.app)" \
+	"$(add_dock_item /Applications/Microsoft\ Teams.app)" \
+	"$(add_dock_item /Applications/Discord.app)" \
+	"$(add_dock_item /System/Applications/FaceTime.app)" \
+	"$(add_dock_item /Applications/Whatsapp.app)" \
+	"$(add_dock_item /Applications/Telegram.app)" \
+	"$(add_dock_item /Applications/Messenger.app)"
 
 for app in "cfprefsd" \
 	"Dock" \
