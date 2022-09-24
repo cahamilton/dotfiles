@@ -5,7 +5,7 @@ if test ! ["$(command -v brew)"]; then
 	echo "Installing Homebrew..."
 
 	# Install Homebrew
-	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
 	echo "Updating Homebrew and formulae..."
 
