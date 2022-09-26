@@ -8,6 +8,7 @@ fi
 
 export ZPLUG_HOME="$HOMEBREW_PREFIX/zplug"
 
+setopt AUTO_CD
 setopt HIST_IGNORE_SPACE
 
 source $ZPLUG_HOME/init.zsh
