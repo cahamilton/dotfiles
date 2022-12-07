@@ -86,8 +86,8 @@ defaults write com.apple.dock persistent-apps -array \
 	"$(add_dock_item /Applications/Postman.app)" \
 	"$(add_dock_item /Applications/Xcode.app/Contents/Applications/FileMerge.app)" \
 	"$(add_dock_spacer)" \
-	"$(add_dock_item /Applications/Adobe\ Photoshop\ 2022/Adobe\ Photoshop\ 2022.app)" \
-	"$(add_dock_item /Applications/Adobe\ Illustrator\ 2022/Adobe\ Illustrator.app)" \
+	"$(add_dock_item /Applications/Adobe\ Photoshop\ 2023/Adobe\ Photoshop\ 2023.app)" \
+	"$(add_dock_item /Applications/Adobe\ Illustrator\ 2023/Adobe\ Illustrator.app)" \
 	"$(add_dock_spacer)" \
 	"$(add_dock_item /Applications/Slack.app)" \
 	"$(add_dock_item /Applications/Microsoft\ Teams.app)" \
