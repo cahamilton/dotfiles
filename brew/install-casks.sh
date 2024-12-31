@@ -41,6 +41,7 @@ brew install handbrake --cask
 brew install jordanbaird-ice --cask
 brew install keepingyouawake --cask
 brew install logitech-options --cask
+brew install monitorcontrol --cask
 brew install netgear-switch-discovery-tool --cask
 brew install raycast --cask
 brew install skitch --cask
