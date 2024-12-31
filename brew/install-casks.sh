@@ -35,6 +35,7 @@ brew install 1password --cask
 brew install bettertouchtool --cask
 brew install chatgpt --cask
 brew install disk-inventory-x --cask
+brew install ente-auth --cask
 brew install gpg-suite-no-mail --cask
 brew install handbrake --cask
 brew install jordanbaird-ice --cask
