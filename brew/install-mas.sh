@@ -14,3 +14,4 @@ mas install 463362050  # PhotoSweeper
 mas install 409203825  # Numbers
 mas install 497799835  # Xcode
 mas install 905953485  # NordVPN
+mas install 425955336  # Skitch

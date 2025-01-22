@@ -44,7 +44,6 @@ brew install logitech-options --cask
 brew install monitorcontrol --cask
 brew install netgear-switch-discovery-tool --cask
 brew install raycast --cask
-brew install skitch --cask
 brew install the-unarchiver --cask
 brew install viscosity --cask
 
