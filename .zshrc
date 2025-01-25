@@ -1,11 +1,5 @@
 export PATH="/usr/local/sbin:$PATH"
-export HOMEBREW_PREFIX="/usr/local/opt"
-
-# Update prefix if running on Apple Silicon
-if [[ "$(uname -m)" == "arm64" ]]; then
-	export HOMEBREW_PREFIX="/opt/homebrew/opt"
-fi
-
+export HOMEBREW_PREFIX="/opt/homebrew/opt"
 export ZPLUG_HOME="$HOMEBREW_PREFIX/zplug"
 
 setopt AUTO_CD
