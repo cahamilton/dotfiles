@@ -4,6 +4,8 @@
 .idea/
 .scratch/
 .vscode/
+.yalc/
+yalc.lock
 *.patch
 scratchpad.*
 npm-debug.log
