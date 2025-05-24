@@ -7,14 +7,14 @@ fi
 
 # Browsers
 brew install firefox --cask
-brew install firefox-developer-edition --cask
+brew install firefox@developer-edition --cask
 brew install google-chrome --cask
-brew install google-chrome-dev --cask
+brew install google-chrome@dev --cask
 
 if [[ "$PROFILE" == "work" ]]; then
 	brew install brave-browser --cask
 	brew install microsoft-edge --cask
-	brew install microsoft-edge-dev --cask
+	brew install microsoft-edge@dev --cask
 	brew install opera --cask
 	brew install safari-technology-preview --cask
 fi
