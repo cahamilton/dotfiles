@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Check if Homebrew is installed
-if test ! ["$(command -v brew)"]; then
+if [ ! "$(command -v brew)" ]; then
 	echo "Installing Homebrew..."
 
 	# Install Homebrew
@@ -14,6 +14,13 @@ else
 
 	# Upgrade existing formulae
 	brew upgrade
+fi
+
+# Prompt for profile type if not already set
+if [[ -z "$PROFILE" ]]; then
+	echo "Which profile do you want to install? (work/home)"
+	read -r PROFILE
+	export PROFILE
 fi
 
 source "brew/install-formulae.sh"
