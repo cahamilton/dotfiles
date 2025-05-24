@@ -27,7 +27,6 @@ brew install iterm2 --cask
 brew install postman --cask
 brew install sublime-text --cask
 brew install visual-studio-code --cask
-brew install webponize --cask
 
 if [[ "$PROFILE" == "work" ]]; then
 	brew install adobe-creative-cloud --cask
@@ -85,7 +84,6 @@ fi
 
 # Quick Look Plugins
 brew install qlcolorcode --cask
-brew install qlimagesize --cask
 brew install qlmarkdown --cask
 brew install qlprettypatch --cask
 brew install qlstephen --cask
