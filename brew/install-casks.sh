@@ -5,10 +5,6 @@ if [[ -z "$PROFILE" ]]; then
 	exit 1
 fi
 
-# Add additional repositories
-brew tap homebrew/cask-drivers
-brew tap homebrew/cask-versions
-
 # Browsers
 brew install firefox --cask
 brew install firefox-developer-edition --cask
