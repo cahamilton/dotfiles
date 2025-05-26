@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [[ -z "$PROFILE" ]]; then
+	echo "PROFILE is not set. Exiting..."
+	exit 1
+fi
+
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
@@ -51,51 +56,63 @@ add_dock_item() {
 	printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>', "$1"
 }
 
+add_dock_item_profile_home() {
+	[[ "$PROFILE" == "home" ]] && add_dock_item "$1"
+}
+
+add_dock_item_profile_work() {
+	[[ "$PROFILE" == "work" ]] && add_dock_item "$1"
+}
+
 add_dock_spacer() {
 	printf '<dict><key>tile-type</key><string>spacer-tile</string></dict>'
+}
+
+add_dock_spacer_profile_home() {
+	[[ "$PROFILE" == "home" ]] && add_dock_spacer
+}
+
+add_dock_spacer_profile_work() {
+	[[ "$PROFILE" == "work" ]] && add_dock_spacer
 }
 
 defaults write com.apple.dock persistent-apps -array \
 	"$(add_dock_item /System/Applications/Notes.app)" \
 	"$(add_dock_item /System/Applications/Reminders.app)" \
 	"$(add_dock_item /System/Applications/Calendar.app)" \
-	"$(add_dock_item /Applications/Trello.app)" \
-	"$(add_dock_item /Applications/Microsoft\ Outlook.app)" \
-	"$(add_dock_item /System/Applications/Mail.app)" \
+	"$(add_dock_item_profile_home /Applications/Trello.app)" \
+	"$(add_dock_item_profile_home /System/Applications/Mail.app)" \
+	"$(add_dock_item /System/Applications/System\ Settings.app)" \
 	"$(add_dock_item /Applications/1Password.app)" \
-	"$(add_dock_item /Applications/Authy\ Desktop.app)" \
-	"$(add_dock_spacer)" \
-	"$(add_dock_item /Applications/Spotify.app)" \
-	"$(add_dock_item /System/Applications/Music.app)" \
+	"$(add_dock_item /Applications/Ente\ Auth.app)" \
 	"$(add_dock_spacer)" \
 	"$(add_dock_item /Applications/Firefox.app)" \
-	"$(add_dock_item /Applications/Firefox\ Developer\ Edition.app)" \
+	"$(add_dock_item_profile_work /Applications/Firefox\ Developer\ Edition.app)" \
 	"$(add_dock_item /Applications/Google\ Chrome.app)" \
-	"$(add_dock_item /Applications/Google\ Chrome\ Dev.app)" \
-	"$(add_dock_item /Applications/Microsoft\ Edge.app)" \
-	"$(add_dock_item /Applications/Brave\ Browser.app)" \
+	"$(add_dock_item_profile_work /Applications/Google\ Chrome\ Dev.app)" \
+	"$(add_dock_item_profile_work /Applications/Microsoft\ Edge.app)" \
+	"$(add_dock_item_profile_work /Applications/Brave\ Browser.app)" \
 	"$(add_dock_spacer)" \
 	"$(add_dock_item /Applications/iTerm.app)" \
 	"$(add_dock_item /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app)" \
-	"$(add_dock_item /Applications/BrowserStackLocal.app)" \
-	"$(add_dock_item ~/Applications/JetBrains\ Toolbox/Android\ Studio.app)" \
-	"$(add_dock_item ~/Applications/JetBrains\ Toolbox/IntelliJ\ IDEA\ Ultimate.app)" \
+	"$(add_dock_item_profile_work ~/Applications/Android\ Studio.app)" \
+	"$(add_dock_item_profile_work ~/Applications/IntelliJ\ IDEA\ Ultimate.app)" \
 	"$(add_dock_item /Applications/Visual\ Studio\ Code.app)" \
 	"$(add_dock_item /Applications/Sublime\ Text.app)" \
-	"$(add_dock_item /Applications/Altair\ GraphQL\ Client.app)" \
+	"$(add_dock_item_profile_work /Applications/Altair\ GraphQL\ Client.app)" \
 	"$(add_dock_item /Applications/Postman.app)" \
 	"$(add_dock_item /Applications/Xcode.app/Contents/Applications/FileMerge.app)" \
+	"$(add_dock_spacer_profile_work)" \
+	"$(add_dock_item_profile_work /Applications/Adobe\ Photoshop\ 2025/Adobe\ Photoshop\ 2025.app)" \
+	"$(add_dock_item_profile_work /Applications/Adobe\ Illustrator\ 2025/Adobe\ Illustrator.app)" \
 	"$(add_dock_spacer)" \
-	"$(add_dock_item /Applications/Adobe\ Photoshop\ 2023/Adobe\ Photoshop\ 2023.app)" \
-	"$(add_dock_item /Applications/Adobe\ Illustrator\ 2023/Adobe\ Illustrator.app)" \
-	"$(add_dock_spacer)" \
-	"$(add_dock_item /Applications/Slack.app)" \
-	"$(add_dock_item /Applications/Microsoft\ Teams.app)" \
-	"$(add_dock_item /Applications/Discord.app)" \
-	"$(add_dock_item /System/Applications/FaceTime.app)" \
-	"$(add_dock_item /Applications/Whatsapp.app)" \
-	"$(add_dock_item /Applications/Telegram.app)" \
-	"$(add_dock_item /Applications/Messenger.app)"
+	"$(add_dock_item /Applications/Spotify.app)" \
+	"$(add_dock_item_profile_home /System/Applications/FaceTime.app)" \
+	"$(add_dock_item_profile_home /Applications/Whatsapp.app)" \
+	"$(add_dock_item_profile_home /Applications/Telegram.app)" \
+	"$(add_dock_item_profile_work /Applications/Slack.app)" \
+	"$(add_dock_item_profile_work /Applications/Microsoft\ Teams.app)" \
+	"$(add_dock_item /Applications/Discord.app)"
 
 # Set folder location for iTerm2 preferences
 defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "~/.dotfiles"
