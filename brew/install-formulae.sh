@@ -14,6 +14,7 @@ brew install hadolint
 brew install ollama
 
 if [[ "$PROFILE" == "work" ]]; then
+	brew install google-cloud-sdk
 	brew install openjdk@11
 	brew install pyenv
 fi
