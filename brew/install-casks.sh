@@ -20,7 +20,7 @@ if [[ "$PROFILE" == "work" ]]; then
 fi
 
 # Development
-brew install docker --cask
+brew install docker-desktop --cask
 brew install github --cask
 brew install imageoptim --cask
 brew install iterm2 --cask
@@ -41,7 +41,7 @@ brew install 1password --cask
 brew install chatgpt --cask
 brew install ente-auth --cask
 brew install gpg-suite-no-mail --cask
-brew install handbrake --cask
+brew install handbrake-app --cask
 brew install keepingyouawake --cask
 brew install logi-options+ --cask
 brew install monitorcontrol --cask
