@@ -28,6 +28,10 @@ brew install postman --cask
 brew install sublime-text --cask
 brew install visual-studio-code --cask
 
+if [[ "$PROFILE" == "home" ]]; then
+	brew install gimp --cask
+fi
+
 if [[ "$PROFILE" == "work" ]]; then
 	brew install adobe-creative-cloud --cask
 	brew install altair-graphql-client --cask
